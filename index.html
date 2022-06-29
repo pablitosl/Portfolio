@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pablo Castro</title>
+        <link rel="icon" href="img/adolescente.png">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__titulo">
+                <img src="img/ux.png" alt="logo" class="logo">
+                <div> 
+                    <h1 class="nombre">Pablo Castro</h1>
+                    <p class="sub"> (Front end developer)</p>
+                </div>
+            </div>
+            <ul class="lista">
+                <li><a href="#uno" class="lista__a">Home</a></li>
+                <li><a href="#dos" class="lista__a">Estudios</a></li>
+                <li><a href="#tres" class="lista__a">Proyecto</a></li>
+                <li><a href="#cuatro" class="lista__a">Contacto</a></li>
+            </ul>
+        </header>
+
+        <main class="main">
+            <section class="biografia" id="uno">  
+                <p class="parrafo">Hola me llamo Pablo tengo 25 años, soy de Argentina y quiero ser programador Front End.<br> Con iniciativa y ganas de superarse.
+                    Capacidad de trabajar en equipo y resolución de problemas, con ganas de seguir aprendiendo, y aportar a la empresa en lo que sea necesario.
+                    Lograr cada meta que se proponga en la empresa y crecer en mi área profesional.
+                </p>    
+                <div>
+                    <img src="img/luffymugi.png" alt="perfil" class="perfil">
+                    <button type="button" class="btn btn-light" id="btn">CV ONLINE</button>
+                </div>       
+            </section>
+
+            
+            <section class="recorrido" id="dos">
+                <div class="skill">
+                    <h1>   
+                        Skill:                   
+                    </h1>
+                    <div class="skill__png">
+                        <img src="img/html-5.png" alt="html">
+                        <img src="img/css-3.png" alt="css">
+                        <img src="img/js.png" alt="js">
+                        <img src="img/git.png" alt="git">
+                        <img src="img/githubskill.png" alt="git hub">
+                    </div>
+                </div>
+                <div class="estudio">
+                    <h1>Formación:</h1>
+                    <ul>
+                        <li>
+                            <p class="parrafo">Actualmente estoy en el programa ONE (Oracle Next Education) en el que estoy introduciéndome en las bases del desarrollo web. (2022)</p>
+                            <img src="img/oracle-one-logo.svg" alt="one" class="one">
+                        </li>
+                        <li>
+                            <img src="img/tel.png" alt="tel" class="tel" >
+                            <p class="parrafo">Vi los principios de "Diseño web con HTML5 + CSS" y "Programación con JavaScript" (2021)</p>
+                        </li>                       
+                    </ul>
+                </div>
+            </section>
+
+
+            <section class="proyectos" id="tres">
+                <h1 class="proyect">Proyectos</h1>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                                <img src="img/ahorcado.png" class="d-block w-100" alt="ahorcado" id="ahorcado">
+                            <div class="carousel-caption d-none d-md-block" id="back">
+                                <h5>AHORCADO</h5>
+                                <div>
+                                    <a href="https://github.com/pablitosl/ahorcado-alura.github.io" class="a" target="_blank">Codigo</a>
+                                    <a href="https://pablitosl.github.io/ahorcado-alura.github.io/" class="a" target="_blank">Pagina</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                                <img src="img/encriptador.png" class="d-block w-100" alt="encriptador" id="encriptador">
+                            <div class="carousel-caption d-none d-md-block" id="back">
+                                <h5>ENCRIPTADOR</h5>
+                                <div>
+                                    <a href="https://github.com/pablitosl/Encriptador-alura.github.io" class="a" target="_blank">Codigo</a>
+                                    <a href="https://pablitosl.github.io/Encriptador-alura.github.io/" class="a" target="_blank">Pagina</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+            </section>
+
+
+            <section class="contacto" id="cuatro">
+                <h1>Contacto</h1>
+                <form action="">
+                    <input type="text" placeholder="Nombre" class="input">
+                    <input type="email" placeholder="Email" class="input">
+                    <input type="text" placeholder="Asunto" class="input">
+                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+                    <input type="submit" class="btn-input">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="redes">
+                <a href="http://linkedin.com/in/pablo-castro-a0680a210" target="_blank">
+                    <img class="logo__footer" src="img/linkedin.png" >
+                </a>
+                <a href="https://github.com/pablitosl" target="_blank">
+                    <img class="logo__footer" src="img/github.png" >
+                </a>  
+                <a href="mailto:pablocastrod7@gmail.com" target="_blank">
+                    <img class="logo__footer" src="img/email.png" >
+                </a>  
+                <p>Pablo Castro</p> 
+                <p>Proyecto 3° de Alura</p>
+            </div>
+            
+        </footer>
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>  
