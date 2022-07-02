@@ -43,3 +43,36 @@
     color: #B8FFF9;
     text-shadow: 1px 1px 25px#fff;
 }
+
+@media screen and (max-width: 1030px){
+    .nombre{
+        font-size: 3.9rem;
+        line-height: 50px;
+    }
+    .sub{
+        line-height: 20px;
+    }
+
+}
+@media screen and (max-width: 870px) {
+    .lista{
+        flex-wrap: wrap;
+    }
+}
+@media  screen and (max-width: 770px) {
+    .logo{
+        padding-top: 5px;
+        margin-right: 5px;
+    }
+    .lista{
+        margin: 0;
+    }
+    .lista__a{
+        margin: 0 0.4rem;
+    }
+}
+@media  screen and (max-width: 500px){
+    .logo{
+        display: none;
+    }
+}

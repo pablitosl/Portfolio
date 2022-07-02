@@ -222,3 +222,73 @@ input:focus{
     
     transform: scale(1.1);
 }
+
+@media  screen and (max-width: 770px) {
+    .biografia{
+        width: 95%;
+        margin: auto;
+        padding: 0;
+        padding-top: 120px;
+        justify-content: center;
+        flex-direction: column-reverse;
+        }
+    .biografia div{
+        width: auto;
+    }
+    .biografia p{
+        width: 95%;
+        letter-spacing: 1.2px;
+        margin-left: 0;
+        margin: auto;
+    }
+    .recorrido{
+        scroll-margin-top: 9rem;
+        flex-direction: column;
+    }
+    .skill{
+        width: 100%;
+        margin: 10px;
+    }
+    .skill__png{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .estudio{
+        width: 100%;
+    }
+    .estudio ul li{
+        margin: 5px;
+        justify-content: center;
+    }
+    .one{
+        margin-left: 0;
+    }
+    .proyectos{
+        width: 85%;
+        scroll-margin-top: 10rem;
+    }
+    #ahorcado, #encriptador{
+        height: 400px;
+    }
+    .contacto{
+        scroll-margin-top: 10rem;
+        width: 85%; 
+    }
+    .contacto form{
+        width: 400px;
+    }
+}
+@media  screen and (max-width: 500px){
+    .proyectos{
+        width: 95%;
+    }
+    #ahorcado, #encriptador{
+        height: 250px;
+    }
+    .contacto{
+        width: 90%;
+    }
+    .contacto form{
+        width: 250px;
+    }
+}
