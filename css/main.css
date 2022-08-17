@@ -10,10 +10,10 @@ html {
 }
 .biografia{
     width: 100%;
-    padding: 150px 0 0 15px;
+    padding: 130px 0 0 15px;
     display: flex;
     justify-content: space-between;
-    scroll-margin-top: 13rem; 
+    scroll-margin-top: 12rem; 
 }
 .biografia p{
     font-weight: 550;
@@ -27,18 +27,101 @@ html {
     flex-direction: column;
     align-items: center;
 }
-#btn{
-    margin-top: 10px;
-    padding:  10px 20px;
-    font-weight: 600;
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
 }
-#btn:hover{
-    background-color: #06283D;
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+);
+}
+.front  {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+.front a{
+    text-decoration: none;
     color: white;
 }
+.front a:hover{
+    
+    color: white;
+}
+button:hover {
+    filter: brightness(110%);
+}
+button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
 .perfil{
-    height: 300px;
-    border-radius: 100% ;
+    height: 350px;
+    border-radius: 40% ;
+    margin-bottom: 15px;
     filter: drop-shadow(0px 0px 132px rgba(217,87,87,0.99));
     -webkit-filter: drop-shadow(0px 0px 132px rgba(217,87,87,0.99));
     -moz-filter: drop-shadow(0px 0px 132px rgba(217,87,87,0.99));
@@ -53,12 +136,12 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 70px;
+    margin-top: 50px;
     scroll-margin-top: 8rem; 
 }
 .skill{
     width: 45%;
-    margin: 10px;
+    margin-left: 10px;
 }
 .skill h1{
     font-size: 3.5rem;
@@ -83,7 +166,7 @@ html {
     -moz-filter: drop-shadow(5px 5px 15px #fff);
 }
 .estudio{
-    width: calc(55% - 10px);
+    width: 65%;
 
 }
 .estudio h1{
@@ -92,8 +175,11 @@ html {
     font-weight: 600;
     margin: 20px 0;
 }
+.estudio ul{
+    padding: 0;
+}
 .estudio ul li{
-    margin: 30px;
+    margin: 30px 10px;
     display: flex;
     justify-content: justify;
     
@@ -103,6 +189,20 @@ html {
     color: white;
     width: 80%;
     line-height: 30px;
+} 
+.parrafoPescar{
+    font-size: 1.5rem;
+    color: white;
+    width: 80%;
+    line-height: 30px;
+}
+.pescar{
+    width: 160px;
+    height: 110px;
+    margin-right: 20px;
+}
+.pescar:hover{
+    transform: scale(1.1);
 }
 .one{
     width: 125px;
@@ -121,7 +221,8 @@ html {
     transform: scale(1.1);
 }
 .proyectos{
-    width: 60%;
+    width: 65%;
+    height: auto;
     margin: auto;
     scroll-margin-top: 9rem;
 }
@@ -136,16 +237,17 @@ html {
     height: 500px;
 }
 #back{
-    background: rgba(255,255,255,.3);
+    background: rgba(0,0,0,.5);
     border-radius: 30px;
     width: 20%;
     margin: auto;
 }
 #back h5{
-    color: black;
+    color: white;
+    font-weight: 600;
 }
 .a{
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 1rem;
     margin: 0 5px;
@@ -222,8 +324,23 @@ input:focus{
     
     transform: scale(1.1);
 }
-
+@media  screen and (max-width: 870px) {
+    .proyectos{
+        width: 90%;
+        scroll-margin-top: 10rem;
+    }
+    #back{
+        display: none;
+    }
+    #back h5{
+        display: none;
+    }
+    .a{
+        display: none;
+    }
+}
 @media  screen and (max-width: 770px) {
+    
     .biografia{
         width: 95%;
         margin: auto;
@@ -264,12 +381,13 @@ input:focus{
         margin-left: 0;
     }
     .proyectos{
-        width: 85%;
+        width: 90%;
         scroll-margin-top: 10rem;
     }
     #ahorcado, #encriptador{
         height: 400px;
     }
+    
     .contacto{
         scroll-margin-top: 10rem;
         width: 85%; 
