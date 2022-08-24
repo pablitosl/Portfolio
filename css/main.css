@@ -135,29 +135,33 @@ button:focus:not(:focus-visible) {
 .recorrido{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
     scroll-margin-top: 8rem; 
 }
 .skill{
-    width: 45%;
-    margin-left: 10px;
+    width: 100%;
+    margin: auto;
 }
 .skill h1{
     font-size: 3.5rem;
     color: white;
     font-weight: 600;
     margin: 20px 0;
+    text-align: center;
 }
 .skill__png{
     margin: 10px 0;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 .skill img{
-    height: 8rem;
-    margin: 8px 16px;
+    height: 9rem;
+    margin: 10px 20px;
 }
 .skill img:hover{
     border-radius: 10px;
@@ -174,6 +178,7 @@ button:focus:not(:focus-visible) {
     color: white;
     font-weight: 600;
     margin: 20px 0;
+    text-align: center;
 }
 .estudio ul{
     padding: 0;
@@ -221,7 +226,7 @@ button:focus:not(:focus-visible) {
     transform: scale(1.1);
 }
 .proyectos{
-    width: 65%;
+    width: 100%;
     height: auto;
     margin: auto;
     scroll-margin-top: 9rem;
@@ -231,28 +236,104 @@ button:focus:not(:focus-visible) {
     color: white;
     font-weight: 600;
     text-align: center;
-    margin: 70px 0 50px 0;
+    margin: 60px 0;
 }
-#ahorcado, #encriptador{
-    height: 500px;
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 }
-#back{
-    background: rgba(0,0,0,.5);
-    border-radius: 30px;
-    width: 20%;
-    margin: auto;
+.tarjeta {
+    width: 400px;
+    height: 250px;
+    background: #f5f5f5;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(35,35,35,0.3);
+    transition: box-shadow .3s ease-in-out;
+    margin: 20px 15px;
+    margin-bottom: 56px;
 }
-#back h5{
-    color: white;
-    font-weight: 600;
+.tarjeta-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
-.a{
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 0 5px;
-    text-decoration: none;
-    text-transform: uppercase;
+/*Image*/
+.tarjeta-img {
+    background: #d6475f;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+    z-index: 2;
+}
+.img-proyecto{
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+}
+/*Buttons*/
+.social-media {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1.5rem;
+    transform: translateY(-10%);
+    z-index: 3;
+}
+.social-media li {
+    background: #ff738b;
+    padding: 8px 9px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+/*Text*/
+.title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 0.9em;
+}
+svg {
+    --size: 25px;
+    width: var(--size);
+    height: var(--size);
+    fill: #252525;
+}
+
+/* Hover */
+.tarjeta:hover {
+    box-shadow: 1px 2px 10px rgba(35,35,35,0.5);
+}
+
+.tarjeta:hover .tarjeta-img {
+    transform: translateY(-30%);
+}
+
+.tarjeta:hover .social-media li {
+    transform: translateY(-5%);
+    opacity: 1;
+}
+.tarjeta:hover .social-media li:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.tarjeta:hover .social-media li:nth-child(2) {
+    transition-delay: .1s;
+}
+
+.tarjeta:hover .social-media li:nth-child(3) {
+    transition-delay: .2s;
 }
 .contacto{
     width: 75%;
@@ -329,15 +410,6 @@ input:focus{
         width: 90%;
         scroll-margin-top: 10rem;
     }
-    #back{
-        display: none;
-    }
-    #back h5{
-        display: none;
-    }
-    .a{
-        display: none;
-    }
 }
 @media  screen and (max-width: 770px) {
     
@@ -371,10 +443,10 @@ input:focus{
         flex-wrap: wrap;
     }
     .estudio{
-        width: 100%;
+        width: 95%;
     }
     .estudio ul li{
-        margin: 5px;
+        margin: 10px;
         justify-content: center;
     }
     .one{
@@ -383,11 +455,7 @@ input:focus{
     .proyectos{
         width: 90%;
         scroll-margin-top: 10rem;
-    }
-    #ahorcado, #encriptador{
-        height: 400px;
-    }
-    
+    } 
     .contacto{
         scroll-margin-top: 10rem;
         width: 85%; 
@@ -399,9 +467,6 @@ input:focus{
 @media  screen and (max-width: 500px){
     .proyectos{
         width: 95%;
-    }
-    #ahorcado, #encriptador{
-        height: 250px;
     }
     .contacto{
         width: 90%;
