@@ -156,7 +156,7 @@ button:focus:not(:focus-visible) {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
 }
 .skill img{
@@ -170,7 +170,7 @@ button:focus:not(:focus-visible) {
     -moz-filter: drop-shadow(5px 5px 15px #fff);
 }
 .estudio{
-    width: 65%;
+    width: 80%;
 
 }
 .estudio h1{
